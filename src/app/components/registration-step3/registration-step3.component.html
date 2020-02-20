@@ -1,0 +1,31 @@
+<div class="container text-center" style="margin-top: 50px;">
+<div *ngIf="formSubmitted">
+  <h4 style="color: brown">Your details submitted successfully</h4>
+</div>
+<div *ngIf="!formSubmitted">
+  <h4 style="color: red">Check your details before submit</h4><br/>
+ 
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{regForm.get('personalDetails').get('firstname').value}}</td>
+        <td>{{regForm.get('personalDetails').get('lastname').value}}</td>
+        <td>{{regForm.get('contactDetails').get('email').value}}</td>
+        <td>{{regForm.get('contactDetails').get('city').value}}</td>
+      </tr>    
+    </tbody>
+  </table>
+  <br/>
+  <button class="btn btn-success" type="button" matStepperPrevious>Previous</button>
+  &nbsp;
+  <button class="btn btn-success" type="button" (click)="submit()">Submit</button>
+</div>
+</div>
