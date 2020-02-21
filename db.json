@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "firstname": "Venugopal",
+      "lastname": "Boddu",
+      "email": "venugopal@gmail.com",
+      "city": "SAP",
+      "id": 2
+    },
+    {
+      "firstname": "Mahesh",
+      "lastname": "Rapolu",
+      "email": "mahesh@gmail.com",
+      "city": "Nalgonda",
+      "id": 3
+    },
+    {
+      "firstname": "Prasanna",
+      "lastname": "Kumar",
+      "email": "prasanna@gmail.com",
+      "city": "Gnt",
+      "id": 4
+    },
+    {
+      "firstname": "Akram",
+      "lastname": "Shaik",
+      "email": "akram@gmail.com",
+      "city": "hyd",
+      "id": 5
+    },
+    {
+      "firstname": "siva",
+      "lastname": "teja",
+      "email": "siva@gmail.com",
+      "city": "Tenali",
+      "id": 6
+    }
+  ]
+}

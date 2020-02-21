@@ -1,6 +1,33 @@
-<div class="container text-center" style="margin-top: 50px;">
+<div class="container text-center" style="margin-top: 10px;">
 <div *ngIf="formSubmitted">
-  <h4 style="color: brown">Your details submitted successfully</h4>
+  <h4 style="color:green">Your details submitted successfully</h4>
+  <hr/>
+  <h5 style="color: brown">All Employee Details from db.json</h5>
+
+  <div class="search-hero">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching with any column...">
+</div><br><br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+          <th scope="col">Sno</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of fdata| name: searchText:['firstname', 'lastname', 'email', 'city']; let i=index;">
+        <td>{{i +1}}</td>
+        <td>{{d.firstname}}</td>
+        <td>{{d.lastname}}</td>
+        <td>{{d.email}}</td>
+        <td>{{d.city}}</td>
+      </tr>    
+    </tbody>
+  </table>
+  <h2 *ngIf="(fdata | name: searchText:['firstname', 'lastname', 'email', 'city'])?.length==0" style="color: red">Result not found</h2>
 </div>
 <div *ngIf="!formSubmitted">
   <h4 style="color: red">Check your details before submit</h4><br/>
